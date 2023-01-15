@@ -149,8 +149,8 @@ main{
 i{
     display: flex;
     align-items: center;
-    height: 50%;
-    width: 50%;
+    height: fit-content;
+    width: fit-content;
     margin: 0;
     padding: 0;
     color: black;
