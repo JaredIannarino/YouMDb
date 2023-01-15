@@ -209,9 +209,9 @@ i{
     "poster ..... ..... ..... ....."; 
     grid-template-columns: .20fr .20fr .20fr .20fr .20fr;
     grid-template-rows: 5px 25px 25px 25px 15px;
-    border: 2px solid blue;
     height: 500px;
     grid-gap: 15px;
+    border-bottom: 1px solid grey;
 }
 
 .film-poster{
