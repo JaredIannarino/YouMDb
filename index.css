@@ -205,7 +205,7 @@ i{
     "poster ..... ..... ..... ....."
     "poster title title rating ....."
     "poster runtime genre genre watchlist"
-    "poster plot plot plot plot"
+    "poster plot plot plot ....."
     "poster ..... ..... ..... ....."; 
     grid-template-columns: .20fr .20fr .20fr .20fr .20fr;
     grid-template-rows: 5px 25px 25px 25px 15px;
