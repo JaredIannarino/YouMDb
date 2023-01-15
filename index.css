@@ -210,7 +210,7 @@ i{
     grid-template-columns: .20fr .20fr .20fr .20fr .20fr;
     grid-template-rows: 5px 25px 25px 25px 15px;
     border: 2px solid blue;
-    height: 40%;
+    height: 500px;
     grid-gap: 15px;
 }
 
