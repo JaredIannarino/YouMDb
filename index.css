@@ -111,10 +111,11 @@ main{
     height: 100%;
     width: 70%;
     border: none;
-    padding: 15px 15px 15px 0px;
+    padding: 25px 15px 15px 0px;
     cursor: pointer;
     font-size: 1.25rem;
     margin: 0px;
+    
 }
 
 .search-btn-2{
@@ -125,7 +126,6 @@ main{
     border-bottom-right-radius: 7px;
     cursor: pointer;
     color: black;
-    padding-left: 25px;
 }
 
 .search-btn-1{
