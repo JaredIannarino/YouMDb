@@ -16,7 +16,6 @@ document.addEventListener("click", function(event) {
 
 function getFilmsId(filmsArray){
     filmsArray.forEach(function(films){
-        renderFilmsData(films.Poster)
         getFilmsData(films.Title)
     })
 }
@@ -37,12 +36,12 @@ function renderFilmsData(filmData){
     postSearch.innerHTML += `
     <div class="film-wpr">
         <img class="film-poster" scr="${filmData}">
-        <h1 class="film-title">Title of The movie</h1>
+        <h1 class="film-title">${filmData.Title}</h1>
         <p1 class="film-rating">8/10</p1>
-        <p1 class="film-runtime">117min</p1>
-        <p1 class="film-genre">Action, adventure</p1>
+        <p1 class="film-runtime">${filmData.Runtime}</p1>
+        <p1 class="film-genre">${filmData.Genre}</p1>
         <button class="add-to-watchlist">Watchlist</button>
-        <textarea class="plot">This is the plot of a movie that has a start, middle and an end. It ends with it ending.</textarea>
+        <textarea class="plot">${filmData.Plot}</textarea>
     </div>
     `
 }
