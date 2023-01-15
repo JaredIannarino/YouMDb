@@ -109,7 +109,7 @@ main{
 
 .search-bar{
     height: 100%;
-    width: 75%;
+    width: 60%;
     border: none;
     padding: 15px 15px 15px 0px;
     cursor: pointer;
@@ -124,6 +124,7 @@ main{
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     cursor: pointer;
+    color: black;
 }
 
 .search-btn-1{
@@ -138,6 +139,7 @@ main{
     background: white;
     padding: 0;
     cursor: pointer;
+    width: 10%;
 }
 
 i{
