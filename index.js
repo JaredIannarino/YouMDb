@@ -40,7 +40,7 @@ function renderFilmsData(filmData){
         <p1 class="film-runtime">${filmData.Runtime}</p1>
         <p1 class="film-genre">${filmData.Genre}</p1>
         <button class="add-to-watchlist">Watchlist</button>
-        <textarea class="plot">${filmData.Plot}</textarea>
+        <p1 class="plot">${filmData.Plot}</p1>
     </div>
     `
 }
