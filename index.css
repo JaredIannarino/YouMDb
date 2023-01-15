@@ -142,7 +142,7 @@ main{
     background: white;
     padding: 0;
     cursor: pointer;
-    width: 10%;
+    width: fit-content;
     border: 2px solid purple;
 }
 
