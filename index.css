@@ -125,6 +125,7 @@ main{
     border-bottom-right-radius: 7px;
     cursor: pointer;
     color: black;
+    padding-left: 10px;
 }
 
 .search-btn-1{
