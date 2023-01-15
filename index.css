@@ -167,8 +167,12 @@ i{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    height: 100%;
+    border: 1px solid black;
 }
+
 
 .start-exploring{
     font-size: 2rem;
@@ -180,4 +184,65 @@ i{
     padding: 0;
     opacity: .4;
     max-width: 200px;
+}
+
+.post-search{
+    width: 95%;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.film-poster, .film-title, .film-rating, 
+.film-runtime, .film-genre, .add-to-watchlist, .plot{
+    border: 1px solid black;
+    height: fit-content;
+    margin: 0;
+}
+
+.film-wpr{
+    display: grid;
+    grid-template-areas: 
+    "poster ..... ..... ..... ....."
+    "poster title title rating ....."
+    "poster runtime genre genre watchlist"
+    "poster plot plot plot plot"
+    "poster ..... ..... ..... ....."; 
+    grid-template-columns: .20fr .20fr .20fr .20fr .20fr;
+    grid-template-rows: 5px 25px 25px 25px 15px;
+    border: 2px solid blue;
+    height: 150px;
+    grid-gap: 15px;
+}
+
+.film-poster{
+    grid-area: poster;
+    border: 2px solid purple;
+    height: 100%;
+    width: 100%;
+}
+
+.film-title{
+    grid-area: title;
+}
+
+.film-rating{
+    grid-area: rating;
+    height: 100%;
+}
+
+.film-runtime{
+    grid-area: runtime;
+}
+
+.film-genre{
+    grid-area: genre;
+}
+
+.add-to-watchlist{
+    grid-area: watchlist;
+}
+
+.plot{
+    grid-area: plot;
+    height: 100%;
 }
