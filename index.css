@@ -114,7 +114,6 @@ main{
     padding: 15px 15px 15px 0px;
     cursor: pointer;
     font-size: 1.25rem;
-    padding: 0 0 0 15px;
 }
 
 .search-btn-2{
@@ -145,8 +144,8 @@ main{
 i{
     display: flex;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
     margin: 0;
     padding: 0;
     color: black;
