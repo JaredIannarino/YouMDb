@@ -208,9 +208,9 @@ i{
     "poster plot plot plot ....."
     "poster ..... ..... ..... ....."; 
     grid-template-columns: .20fr .20fr .20fr .20fr .20fr;
-    grid-template-rows: .20fr .20fr .20fr .20fr .20fr;
+    grid-template-rows: 5px 25px 25px 25px 15px;
     border: 2px solid blue;
-    height: 150px;
+    height: 40%;
     grid-gap: 15px;
 }
 
