@@ -187,7 +187,6 @@ i{
 
 .post-search{
     width: 95%;
-
     height: 100%;
 }
 
@@ -207,7 +206,7 @@ i{
     "poster plot plot plot ....."
     "poster ..... ..... ..... ....."; 
     grid-template-columns: .20fr .20fr .20fr .20fr .20fr;
-    grid-template-rows: 5px 25px 25px 25px 15px;
+    grid-template-rows: 10px 50px 35px 300px 15px;
     height: 500px;
     grid-gap: 15px;
     border-bottom: 1px solid grey;
