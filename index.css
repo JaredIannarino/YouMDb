@@ -200,12 +200,12 @@ i{
 .film-wpr{
     display: grid;
     grid-template-areas: 
-    "poster ..... ..... ..... ..... ....."
-    "poster ..... title title rating ....."
-    "poster ..... runtime genre genre watchlist"
-    "poster ..... plot plot plot plot"
-    "poster ..... ..... ..... ..... ....."; 
-    grid-template-columns: .35fr .025fr .175fr .15fr .10fr .10fr;
+    "poster ..... ..... ..... ....."
+    "poster ..... title title ....."
+    "poster ..... runtime genre watchlist"
+    "poster ..... plot plot plot"
+    "poster ..... ..... ..... ....."; 
+    grid-template-columns: .35fr .025fr .275fr .25fr .10fr;
     grid-template-rows: 10px 50px 35px 300px 15px;
     height: 500px;
     border-bottom: 1px solid grey;
@@ -219,7 +219,6 @@ i{
 }
 
 .film-title{
-    grid-area: title;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -230,7 +229,6 @@ i{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    grid-area: rating;
 }
 
 .film-runtime{
@@ -248,4 +246,9 @@ i{
 .plot{
     grid-area: plot;
     height: 100%;
+}
+
+.title-rating-wpr{
+    display: flex;
+    grid-area: title;
 }

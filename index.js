@@ -15,8 +15,11 @@ document.addEventListener("click", function(event) {
 });
 
 function getFilmsId(filmsArray){
+    
     filmsArray.forEach(function(films){
         getFilmsData(films.Title)
+        console.log(films.Poster)
+
     })
 }
 
@@ -27,17 +30,13 @@ function getFilmsData(titles){
 }
 
 function renderFilmsData(filmData){
-    // console.log(filmData)
-    // console.log("Title:", filmData.Title)
-    // console.log("Ratings:", filmData.Ratings)
-    // console.log("Runtime:", filmData.Runtime)
-    // console.log("Genre:", filmData.Genre)
-    // console.log("Plot:", filmData.Plot)
     postSearch.innerHTML += `
     <div class="film-wpr">
-        <img class="film-poster" scr="${filmData}">
-        <h1 class="film-title">${filmData.Title}</h1>
-        <p1 class="film-rating">8/10</p1>
+        <div class="film-poster"></div>
+        <div class="title-rating-wpr">
+            <h1 class="film-title">${filmData.Title}</h1>
+            <p1 class="film-rating">8/10</p1>
+        </div>
         <p1 class="film-runtime">${filmData.Runtime}</p1>
         <p1 class="film-genre">${filmData.Genre}</p1>
         <button class="add-to-watchlist">Watchlist</button>
@@ -45,3 +44,9 @@ function renderFilmsData(filmData){
     </div>
     `
 }
+
+function dealWithData(url){
+   const filmPoster = document.getElementById("film-poster")
+   filmPoster.innerHTML = `<img src="${url}"`
+}
+
