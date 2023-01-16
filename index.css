@@ -126,33 +126,10 @@ main{
     cursor: pointer;
     color: black;
     font-size: 2rem;
+    background-color: lightgrey;
 }
 
-.search-btn-1{
-    display: flex;
-    align-items: center;
-    background-size: cover;
-    width: fit-content;
-    height: fit-content;
-    margin:0px;
-    margin-left: 15px;
-    border: none;
-    background: white;
-    padding: 0;
-    cursor: pointer;
-    width: fit-content;
-}
 
-i{
-    display: flex;
-    align-items: center;
-    height: fit-content;
-    width: fit-content;
-    margin: 0;
-    padding: 0;
-    color: black;
-    font-size: 2rem;
-}
 
 .movie-section{
     display: flex;
