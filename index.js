@@ -27,6 +27,7 @@ function getMovieFromApi(moviesArray){
             fetch(`https://www.omdbapi.com/?apikey=31a874b3&i=${movie.imdbID}`)
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             listsHtml += `
                 <div class="film-wpr">
                     <div id="poster-wpr" class="film-poster-wpr">
@@ -34,21 +35,17 @@ function getMovieFromApi(moviesArray){
                     </div>
                     <div class="title-rating-wpr">
                         <h1 class="film-title">${data.Title}</h1>
-                        <p1 class="film-rating">8/10</p1>
+                        <p1 class="film-rating"><span><i class="fa-solid fa-star"></i></span>${data.imdbRating}</p1>
                     </div>
                     <p1 class="film-runtime">${data.Runtime}</p1>
                     <p1 class="film-genre">${data.Genre}</p1>
-                    <button class="add-to-watchlist">Watchlist</button>
+                    <button class="add-to-watchlist"><i class="fa-solid fa-circle-plus"></i>Watchlist</button>
                     <p1 class="plot">${data.Plot}</p1>
                 </div>
     `   
-           render(listsHtml) 
+        postSearch.innerHTML = `${listsHtml}`
         })
         
     })
     
-}
-
-function render(html){
-    postSearch.innerHTML = `${html}`
 }
