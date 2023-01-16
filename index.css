@@ -146,9 +146,11 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
     height: 100%;
-                                 }
+    color: #9c9c9c;
+}
 
 
 .start-exploring{
@@ -178,13 +180,13 @@ main{
 .film-wpr{
     display: grid;
     grid-template-areas: 
-    "poster ..... ..... ..... ....."
-    "poster ..... title title title"
-    "poster ..... runtime genre watchlist"
-    "poster ..... plot plot plot"
-    "poster ..... ..... ..... ....."; 
-    grid-template-columns: .35fr 25px 100px 250px 1fr;
-    grid-template-rows: 10px 150px 50px 275px 15px;
+    "poster ..... ..... ..... ..... ....."
+    "poster ..... title title title title"
+    "poster ..... runtime genre ..... watchlist"
+    "poster ..... plot plot plot plot"
+    "poster ..... ..... ..... ..... ....."; 
+    grid-template-columns: .35fr 25px 100px fit-content(300px) 1fr 200px;
+    grid-template-rows: 10px fit-content(150px) 50px 275px 15px;
     height: 500px;
     border-bottom: 1px solid grey;
     background-color: white;
@@ -203,18 +205,20 @@ main{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    display: -webkit-box;
+    /* display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    /* -webkit-box-orient: vertical;
+    overflow: hidden; */ */
     
 }
 
 .film-rating{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 10px;
+    padding-top: 12px;
+    height: 100%;
 }
 
 .film-runtime{
@@ -250,6 +254,10 @@ main{
     background-color: transparent;
 }
 
+.add-to-watchlist:hover{
+    background-color: lightgrey;
+}
+
 .plot{
     grid-area: plot;
     height: 100%;
@@ -259,8 +267,9 @@ main{
 
 .title-rating-wpr{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     grid-area: title;
+    border:1px solid red;
 }
 
 .fa-star{

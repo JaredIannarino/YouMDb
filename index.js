@@ -16,7 +16,7 @@ form.addEventListener("submit", async function(event) {
             getMovieFromApi(data.Search)
             preSearch.style.display = "none"
             } else{
-                console.log("No Matching Films")
+                preSearch.innerHTML = `<h1>Sorry cinema lover! <br>We couldn't find any media matching that title</h1>`
             }
    
 })
