@@ -179,7 +179,7 @@ main{
     display: grid;
     grid-template-areas: 
     "poster ..... ..... ..... ....."
-    "poster ..... title title ....."
+    "poster ..... title title title"
     "poster ..... runtime genre watchlist"
     "poster ..... plot plot plot"
     "poster ..... ..... ..... ....."; 
