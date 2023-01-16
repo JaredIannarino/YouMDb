@@ -2,6 +2,7 @@ let searchInput = document.getElementById("search-input")
 const preSearch = document.getElementById("pre-search")
 const postSearch = document.getElementById('post-search')
 const form = document.getElementById("search-form")
+const StartExploring = document.getElementById("start-exploring")
 
 let searchInputValue = ''
 
@@ -19,7 +20,7 @@ form.addEventListener("submit", async function(event) {
             } else{
                 postSearch.style.display = "none"
                 preSearch.style.display = "flex"
-                preSearch.innerHTML = `<h1>Sorry cinema lover! <br>We couldn't find any media matching that title</h1>`
+                StartExploring.innerHTML = `<h1>Sorry cinema lover! <br>We couldn't find any media matching that title</h1>`
             }
    
 })
