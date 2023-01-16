@@ -14,8 +14,11 @@ form.addEventListener("submit", async function(event) {
     const data = await res.json()
         if (data.Response === 'True') {
             getMovieFromApi(data.Search)
+            postSearch.style.display = "grid"
             preSearch.style.display = "none"
             } else{
+                postSearch.style.display = "none"
+                preSearch.style.display = "flex"
                 preSearch.innerHTML = `<h1>Sorry cinema lover! <br>We couldn't find any media matching that title</h1>`
             }
    
