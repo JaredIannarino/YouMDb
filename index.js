@@ -30,9 +30,7 @@ function getMovieFromApi(moviesArray){
             console.log(data)
             listsHtml += `
                 <div class="film-wpr">
-                    <div id="poster-wpr" class="film-poster-wpr">
-                        <img src="${data.Poster}">
-                    </div>
+                        <img class="film-poster" src="${data.Poster}">
                     <div class="title-rating-wpr">
                         <h1 class="film-title">${data.Title}</h1>
                         <p1 class="film-rating"><span><i class="fa-solid fa-star"></i></span>${data.imdbRating}</p1>
