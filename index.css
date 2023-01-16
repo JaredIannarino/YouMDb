@@ -176,7 +176,7 @@ main{
 .film-runtime, .film-genre, .add-to-hof, .plot{
     height: fit-content;
     margin: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .film-wpr{
@@ -220,7 +220,7 @@ main{
     align-items: flex-start;
     padding-left: 10px;
     padding-top: 12px;
-    height: 100%;
+
 }
 
 .film-runtime{
@@ -252,7 +252,7 @@ main{
     grid-area: watchlist;
     font-size: .75em;
     font-weight: bold;
-    /* border: none; */
+    border: none;
     background-color: transparent;
 }
 
