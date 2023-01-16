@@ -171,10 +171,10 @@ main{
 }
 
 .film-poster, .film-title, .film-rating, 
-.film-runtime, .film-genre, .add-to-watchlist, .plot{
+.film-runtime, .film-genre, .add-to-hof, .plot{
     height: fit-content;
     margin: 0;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 .film-wpr{
@@ -185,7 +185,7 @@ main{
     "poster ..... runtime genre ..... watchlist"
     "poster ..... plot plot plot plot"
     "poster ..... ..... ..... ..... ....."; 
-    grid-template-columns: .35fr 25px 100px fit-content(300px) 1fr 300px;
+    grid-template-columns: .35fr 25px 100px fit-content(300px) 1fr 200px;
     grid-template-rows: 10px fit-content(150px) 50px 275px 15px;
     height: 500px;
     border-bottom: 1px solid grey;
@@ -250,7 +250,7 @@ main{
     grid-area: watchlist;
     font-size: .75em;
     font-weight: bold;
-    border: none;
+    /* border: none; */
     background-color: transparent;
 }
 
