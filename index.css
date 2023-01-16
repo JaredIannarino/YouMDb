@@ -183,7 +183,7 @@ main{
     "poster ..... runtime genre watchlist"
     "poster ..... plot plot plot"
     "poster ..... ..... ..... ....."; 
-    grid-template-columns: .35fr 25px 100px 300px 1fr;
+    grid-template-columns: .35fr 25px 100px 250px 1fr;
     grid-template-rows: 10px 150px 50px 275px 15px;
     height: 500px;
     border-bottom: 1px solid grey;
