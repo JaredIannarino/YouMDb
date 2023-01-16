@@ -189,6 +189,7 @@ main{
     border-bottom: 1px solid grey;
     background-color: white;
     padding: 30px 20px 0 20px;
+    box-sizing: border-box;
 
 }
 
