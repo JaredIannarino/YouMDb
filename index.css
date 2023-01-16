@@ -184,7 +184,7 @@ main{
     "poster ..... plot plot plot"
     "poster ..... ..... ..... ....."; 
     grid-template-columns: .35fr .025fr .1fr .3fr .2375fr;
-    grid-template-rows: 10px 150px 50px 285px 15px;
+    grid-template-rows: 10px 150px 50px 275px 15px;
     height: 500px;
     border-bottom: 1px solid grey;
     background-color: white;
