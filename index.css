@@ -115,6 +115,8 @@ main{
     cursor: pointer;
     font-size: 1.75rem;
     margin: 0px;
+    background-color: white;
+
 }
 
 .search-btn-2{
