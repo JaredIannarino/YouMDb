@@ -37,7 +37,7 @@ function getMovieFromApi(moviesArray){
                     </div>
                     <p1 class="film-runtime">${data.Runtime}</p1>
                     <p1 class="film-genre">${data.Genre}</p1>
-                    <button class="add-to-watchlist"><i class="fa-solid fa-circle-plus"></i>Watchlist</button>
+                    <button class="add-to-watchlist"><i class="fa-solid fa-circle-plus"></i>Hall of Fame</button>
                     <p1 class="plot">${data.Plot}</p1>
                 </div>
     `   
