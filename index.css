@@ -222,10 +222,7 @@ main{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* display: -webkit-box;
-    -webkit-line-clamp: 2; /* number of lines */
-    /* -webkit-box-orient: vertical;
-    overflow: hidden; */ */
+
     
 }
 
