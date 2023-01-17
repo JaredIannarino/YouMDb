@@ -191,13 +191,13 @@ main{
 .film-runtime, .film-genre, .add-to-hof, .plot{
     height: fit-content;
     margin: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .film-wpr{
     display: grid;
     grid-template-areas: 
-    "poster ..... ..... ..... ..... ....."
+    "..... ..... ..... ..... ..... ....."
     "poster ..... title title title title"
     "poster ..... runtime genre ..... watchlist"
     "poster ..... plot plot plot plot"
@@ -213,9 +213,9 @@ main{
 .film-poster{
     grid-area: poster;
     box-shadow: 0px 0px 10px 0px rgba(53, 51, 51, 0.925);
-    height: 100%;
-    max-height: 450px;
+    max-height: 600px;
     width: auto;
+    max-width: 250px;
 }
 
 .film-title{
@@ -267,7 +267,7 @@ main{
     grid-area: watchlist;
     font-size: .75em;
     font-weight: bold;
-    /* border: none; */
+    border: none;
     background-color: transparent;
 }
 
