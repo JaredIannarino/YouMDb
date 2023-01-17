@@ -41,7 +41,7 @@ function renderHof() {
                     </div>
                     <p1 class="film-runtime">${data.Runtime}</p1>
                     <p1 class="film-genre">${data.Genre}</p1>
-                    <button class="add-to-hof" data-imdb-id="${data.imdbID}"><i class="fa-solid fa-circle-minus"></i>Hall of Fame</button>
+                    <button class="remove-from-hof" data-imdb-id="${data.imdbID}"><i class="fa-solid fa-circle-minus"></i>Media Database</button>
                     <p1 class="plot">${data.Plot}</p1>
                 </div>
                 `);                
@@ -50,3 +50,9 @@ function renderHof() {
     });
 }
 
+document.addEventListener("click", function(e){
+    if(e.target.classList.contains("remove-from-hof")){
+        console.log("hi")
+    }
+
+})

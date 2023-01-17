@@ -90,34 +90,12 @@ main{
   
 }
 
-
-
-.form-wpr{
-    display: flex;
-    transform: translateY(-50%);
-    align-items: center;
-    justify-content: space-between;
-    height: 12%;
-    width: 90%;
-    border: none;
-    border-radius: 7px;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4); 
-    z-index: 2;
-    background-color: white;
-    max-width: 700px;
-}
-
-
-
-
-
 .hof-section{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: %;
     font-size: 24pt;
     position: relative;
 }
@@ -125,7 +103,7 @@ main{
 
 
 .film-poster, .film-title, .film-rating, 
-.film-runtime, .film-genre, .add-to-hof, .plot{
+.film-runtime, .film-genre, .remove-from-hof, .plot{
     height: fit-content;
     margin: 0;
     /* border: 1px solid black; */
@@ -134,12 +112,12 @@ main{
 .film-wpr{
     display: grid;
     grid-template-areas: 
-    "poster ..... ..... ..... ..... ....."
+    "..... ..... ..... ..... ..... ....."
     "poster ..... title title title title"
     "poster ..... runtime genre ..... watchlist"
     "poster ..... plot plot plot plot"
     "poster ..... ..... ..... ..... ....."; 
-    grid-template-columns: .35fr 25px 100px fit-content(300px) 1fr 225px;
+    grid-template-columns: .35fr 25px 100px fit-content(300px) 1fr 250px;
     grid-template-rows: 10px fit-content(150px) 50px 275px 15px;
     height: 500px;
     border-bottom: 1px solid grey;
@@ -162,7 +140,7 @@ main{
     /* display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines */
     /* -webkit-box-orient: vertical;
-    overflow: hidden; */ */
+    overflow: hidden; */ 
     
 }
 
@@ -195,7 +173,7 @@ main{
 
 }
 
-.add-to-hof{
+.remove-from-hof{
     display: flex;
     justify-content: flex-start;
     align-items: center;
