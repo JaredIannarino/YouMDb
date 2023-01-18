@@ -36,6 +36,8 @@ form.addEventListener("submit", async function(event) {
                 postSearch.style.display = "none"
                 preSearch.style.display = "flex"
                 StartExploring.innerHTML = `<h1>Sorry cinema lover! <br>We couldn't find any media matching that title</h1>`
+                StartExploring.style.fontSize = "1.5em"
+                StartExploring.style.padding = "0px 50px"
             }
    
 })
