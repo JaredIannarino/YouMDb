@@ -129,10 +129,10 @@ main{
 
 
 .film-poster, .film-title, .film-rating, 
-.film-runtime, .film-genre, .remove-from-hof, .plot{
+.film-runtime, .film-genre, .remove-from-hof, .plot, .title-rating-wpr{
     height: fit-content;
     margin: 0;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 .film-wpr{
@@ -143,8 +143,8 @@ main{
     "poster ..... runtime genre ..... watchlist"
     "poster ..... plot plot plot plot"
     "poster ..... ..... ..... ..... ....."; 
-    grid-template-columns: .35fr 25px fit-content(100px) fit-content(300px) 1fr 250px;
-    grid-template-rows: 10px fit-content(150px) 50px 325px 15px;
+    grid-template-columns: .35fr 25px fit-content(100px) fit-content(300px) 1fr 275px;
+    grid-template-rows: 10px fit-content(150px) 50px 275px 15px;
     height: 500px;
     border-bottom: 1px solid grey;
     background-color: white;
@@ -208,7 +208,7 @@ main{
     grid-area: watchlist;
     font-size: .75em;
     font-weight: bold;
-    border: none;
+    /* border: none; */
     background-color: transparent;
     padding: 0;
 }
