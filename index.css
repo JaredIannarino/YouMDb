@@ -266,10 +266,12 @@ main{
     font-weight: bold;
     border: none;
     background-color: transparent;
+    padding: 0;
 }
 
 .add-to-hof:hover{
     box-shadow: 0px 0px 10px 0px rgba(53, 51, 51, 0.925);
+
 }
 
 .plot{
