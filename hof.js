@@ -1,7 +1,8 @@
 const storageKey = 'hofIds';
-
 const hofSection = document.getElementById("hof-section")
 let imdbIds;
+const preAdd = document.getElementById("pre-add")
+
 
 
 window.onload = load()
@@ -10,9 +11,10 @@ document.addEventListener("click", function(e){
     if(e.target.id === "home"){
         window.location.href = "index.html"
     }
-})
+}) 
 
 function load() {
+    
     let json = localStorage.getItem(storageKey);
     
     if (json) {
@@ -20,12 +22,18 @@ function load() {
     } else {
         imdbIds = [];
     }
+
     renderHof();
 }
 
 
-function renderHof() {
 
+function renderHof() {
+    if (imdbIds.length === 0) {
+        preAdd.style.display = "flex";
+    } else {
+        preAdd.style.display = "none";
+    }
     hofSection.innerHTML = '';
     
     imdbIds.forEach(function(imdbId) {
@@ -52,7 +60,10 @@ function renderHof() {
 
 document.addEventListener("click", function(e){
     if(e.target.classList.contains("remove-from-hof")){
-        console.log("hi")
+        
+        imdbIds.splice(imdbIds.indexOf(e.target.dataset.imdbId), 1)
+        localStorage.setItem(storageKey, JSON.stringify(imdbIds))
+        renderHof()
     }
 
 })

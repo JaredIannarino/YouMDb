@@ -1,6 +1,6 @@
 
 const storageKey = 'hofIds'; // I like to keep this in a constant to avoid "magic strings" in code
-
+const preAdd = document.getElementById("pre-add")
 let searchInput = document.getElementById("search-input")
 const preSearch = document.getElementById("pre-search")
 const postSearch = document.getElementById('post-search')
@@ -15,16 +15,17 @@ function init() {
     
     if(json) {
         imdbIDs = JSON.parse(json)
+        
     } else {
         imdbIDs = []; // if there wasn't an entry in local storage create an empty list
+
     }
 }
 
 form.addEventListener("submit", async function(event) {
     searchInputValue = searchInput.value.replace(' ', '+')
     event.preventDefault()
-    // Fetch a list of movies/data
-    // turn off pre-search modal
+
     const res = await fetch(`https://www.omdbapi.com/?apikey=31a874b3&s=${searchInputValue}`)
     const data = await res.json()
         if (data.Response === 'True') {
@@ -80,5 +81,7 @@ function getMoviesFromApi(moviesArray){
         }
     });
 }
+
+
 
 init();
