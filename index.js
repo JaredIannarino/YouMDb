@@ -6,6 +6,8 @@ const preSearch = document.getElementById("pre-search")
 const postSearch = document.getElementById('post-search')
 const form = document.getElementById("search-form")
 const StartExploring = document.getElementById("start-exploring")
+const reelIcon = document.getElementById("reel-icon")
+
 let searchInputValue = ''
 let imdbIDs; // don't initialize the value, this will be done on page load
 
@@ -38,6 +40,7 @@ form.addEventListener("submit", async function(event) {
                 StartExploring.innerHTML = `<h1>Sorry! <br>We couldn't find any media matching that title</h1>`
                 StartExploring.style.fontSize = "1.5em"
                 StartExploring.style.padding = "0px 50px"
+                reelIcon.style.display = "none"
             }
    
 })
