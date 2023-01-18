@@ -35,7 +35,7 @@ form.addEventListener("submit", async function(event) {
             } else{
                 postSearch.style.display = "none"
                 preSearch.style.display = "flex"
-                StartExploring.innerHTML = `<h1>Sorry cinema lover! <br>We couldn't find any media matching that title</h1>`
+                StartExploring.innerHTML = `<h1>Sorry! <br>We couldn't find any media matching that title</h1>`
                 StartExploring.style.fontSize = "1.5em"
                 StartExploring.style.padding = "0px 50px"
             }
