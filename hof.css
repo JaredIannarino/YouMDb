@@ -145,7 +145,7 @@ main{
     "poster ..... ..... ..... ..... ....."; 
     grid-template-columns: .35fr 25px fit-content(100px) fit-content(300px) 1fr 250px;
     grid-template-rows: 10px fit-content(150px) 50px 275px 15px;
-    height: 500px;
+    height: fit-content;
     border-bottom: 1px solid grey;
     background-color: white;
     padding: 20px 20px 0 20px;

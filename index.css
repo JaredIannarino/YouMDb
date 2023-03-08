@@ -22,7 +22,7 @@ main{
     font-family: 'Oswald', sans-serif;
     background-color: white;
     max-width: 1600px;
-    font-size: 24pt;
+    font-size: 28pt;
 }
 
 .top-section::before {
@@ -53,7 +53,6 @@ main{
     position: relative;
     color: white;
     font-weight: bolder;
-    font-size: 5vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -68,8 +67,7 @@ main{
 
 }
 
-.hof-btn, .home{
-    font-size: .5em;
+.hof-btn{
     background: transparent;
     color: white;
     font-weight: bolder;
@@ -78,6 +76,8 @@ main{
     border-radius: 7px;
     border: none;
     border: 1px solid lightgray;
+    font-size: 2rem;
+    height: 125px;
 }
 
 .film-h1{
@@ -94,11 +94,13 @@ main{
     }
     
   .film-h1 {
-     font-size: 72pt;
+     font-size: 2em;
   }
-  .watchlist-btn{
-      font-size: 18pt;
+  .hof-btn{
+      font-size: .6em;
+      height: 125px;
   }
+
   
 }
 
@@ -128,8 +130,8 @@ main{
     font-size: 1.75rem;
     margin: 0px;
     background-color: white;
-    border-top-left-radius:20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .search-btn-2{
@@ -140,7 +142,7 @@ main{
     border-bottom-right-radius: 20px;
     cursor: pointer;
     color: black;
-    font-size: 2rem;
+    font-size: .6em;
     background-color: lightgrey;
 }
 
@@ -153,7 +155,7 @@ main{
     justify-content: center;
     width: 100%;
     height: 75%;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .pre-search{
@@ -169,10 +171,14 @@ main{
 
 
 .start-exploring{
-    font-size: 3em;
+    font-size: 1.75em;
     color: black;
     margin: 0;
     opacity: .4;
+}
+
+.sorry{
+    font-size: .75em;
 }
 
 .reel-icon{
@@ -199,11 +205,11 @@ main{
     grid-template-areas: 
     "..... ..... ..... ..... ..... ....."
     "poster ..... title title title title"
-    "poster ..... runtime genre ..... watchlist"
+    "poster ..... runtime genre rating watchlist"
     "poster ..... plot plot plot plot"
     "poster ..... ..... ..... ..... ....."; 
     grid-template-columns: .35fr 25px 100px fit-content(300px) 1fr 250px;
-    grid-template-rows: 10px fit-content(150px) 50px 300px 15px;
+    grid-template-rows: 10px fit-content(150px) fit-content(50px) 300px 15px;
     height: 500px;
     border-bottom: 1px solid grey;
     background-color: white;
@@ -216,22 +222,25 @@ main{
     max-height: 600px;
     width: auto;
     max-width: 250px;
+    display: flex;
+    align-self: center;
 }
 
 .film-title{
+    grid-area: title;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
-    
+    font-size: 1em;
 }
 
 .film-rating{
+    grid-area: rating;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    font-size: .75em;
+    height: 100%;
     padding-left: 10px;
-    padding-top: 12px;
 
 }
 
@@ -281,11 +290,7 @@ main{
     text-overflow: ellipsis;
 }
 
-.title-rating-wpr{
-    display: flex;
-    align-items: flex-start;
-    grid-area: title;
-}
+
 
 .fa-star{
     color: goldenrod;

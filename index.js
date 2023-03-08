@@ -37,7 +37,7 @@ form.addEventListener("submit", async function(event) {
             } else{
                 postSearch.style.display = "none"
                 preSearch.style.display = "flex"
-                StartExploring.innerHTML = `<h1>Sorry! <br>We couldn't find any media matching that title</h1>`
+                StartExploring.innerHTML = `<h1 class="sorry">Sorry! <br>We couldn't find any media matching that title</h1>`
                 StartExploring.style.fontSize = "1.5em"
                 StartExploring.style.padding = "0px 50px"
                 reelIcon.style.display = "none"
@@ -58,13 +58,12 @@ function getMoviesFromApi(moviesArray){
             fetch(`https://www.omdbapi.com/?apikey=31a874b3&i=${movie.imdbID}`)
         .then(res => res.json())
         .then(data => {
+            console.log(data.Poster)
             listsHtml += `
                 <div class="film-wpr">
-                        <img class="film-poster" src="${data.Poster}">
-                    <div class="title-rating-wpr">
+                        <img class="film-poster" src="${data.Poster === "N/A" ? "images/noImage.png"  : data.Poster }">
                         <h1 class="film-title">${data.Title}</h1>
                         <p1 class="film-rating"><span><i class="fa-solid fa-star"></i></span>${data.imdbRating}</p1>
-                    </div>
                     <p1 class="film-runtime">${data.Runtime}</p1>
                     <p1 class="film-genre">${data.Genre}</p1>
                     <button class="add-to-hof" data-imdb-id="${data.imdbID}"><i class="fa-solid fa-circle-plus"></i>Media Database</button>
