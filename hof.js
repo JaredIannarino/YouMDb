@@ -43,10 +43,9 @@ function renderHof() {
                 hofSection.insertAdjacentHTML('beforeend', `
                     <div class="film-wpr">
                         <img class="film-poster" src="${data.Poster === "N/A" ? "images/noImage.png"  : data.Poster }">
-                    <div class="title-rating-wpr">
                         <h1 class="film-title">${data.Title}</h1>
                         <p1 class="film-rating"><span><i class="fa-solid fa-star"></i></span>${data.imdbRating}</p1>
-                    </div>
+
                     <p1 class="film-runtime">${data.Runtime}</p1>
                     <p1 class="film-genre">${data.Genre}</p1>
                     <button class="remove-from-hof" data-imdb-id="${data.imdbID}"><i class="fa-solid fa-circle-minus"></i>Media Database</button>

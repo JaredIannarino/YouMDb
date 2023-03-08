@@ -58,7 +58,6 @@ function getMoviesFromApi(moviesArray){
             fetch(`https://www.omdbapi.com/?apikey=31a874b3&i=${movie.imdbID}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data.Poster)
             listsHtml += `
                 <div class="film-wpr">
                         <img class="film-poster" src="${data.Poster === "N/A" ? "images/noImage.png"  : data.Poster }">
@@ -77,9 +76,14 @@ function getMoviesFromApi(moviesArray){
     postSearch.addEventListener("click", function(e) {
         if (e.target.classList.contains("add-to-hof")) {
             const imdbId = e.target.dataset.imdbId;
-            
-            if( !imdbIDs.includes(imdbId)) { // only add the id if it doesn't already exist in the list
+            const index = imdbIDs.indexOf(imdbId);
+            if (index === -1) {
+                // only add the id if it doesn't already exist in the list//
                 imdbIDs.push(imdbId);
+                window.confirm("Add this to YourMDb?")
+            } else {
+                window.confirm("Remove this from YourMDb?")
+                imdbIDs.splice(index, 1);
             }
             localStorage.setItem(storageKey, JSON.stringify(imdbIDs))
         }
