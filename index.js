@@ -82,8 +82,7 @@ function getMoviesFromApi(moviesArray){
                 imdbIDs.push(imdbId);
                 window.confirm("Add this to YourMDb?")
             } else {
-                window.confirm("Remove this from YourMDb?")
-                imdbIDs.splice(index, 1);
+                window.alert("You already have this in your media database")
             }
             localStorage.setItem(storageKey, JSON.stringify(imdbIDs))
         }
