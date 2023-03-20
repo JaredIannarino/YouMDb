@@ -14,8 +14,7 @@ body{
 
 main{
     width: 100%;
-    height: 100%;
-    display: flex;
+    height: 100%; 
     flex-direction: column;
     align-items: center;
     font-family: 'Oswald', sans-serif;
@@ -24,13 +23,21 @@ main{
     font-size: 28pt;
 }
 
-.top-section::before {
+main, body, .top-section, .form-wpr, .movie-section, .pre-search, .film-rating, .film-runtime, .film-genre, .add-to-hof{
+     display: flex;
+     align-items: center;
+}
+
+.top-section::before, .top-section::after{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.top-section::before {
     background-image: url('images/background.jpg');
     opacity: 0.5;
     background-position-y: -130px;
@@ -39,12 +46,6 @@ main{
 }
 
 .top-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(1, 1, 1, 0.8);
 }
 
@@ -52,9 +53,7 @@ main{
     position: relative;
     color: white;
     font-weight: bolder;
-    display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 100%;
     height: 22.5%;
     }
@@ -106,9 +105,7 @@ main{
 
 
 .form-wpr{
-    display: flex;
     transform: translateY(-50%);
-    align-items: center;
     justify-content: space-between;
     height: 7.5%;
     width: 95%;
@@ -144,14 +141,13 @@ main{
     font-size: .5em;
     font-weight: 300;
     background-color: lightgrey;
+
 }
 
 
 
-.movie-section .hof-section{
-    display: flex;
+.movie-section{
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     width: 100%;
     height: 75%;
@@ -159,10 +155,8 @@ main{
 }
 
 .pre-search{
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
     text-align: center;
     width: 100%;
     height: 100%;
@@ -196,7 +190,7 @@ main{
 
 .film-poster, .film-title, .film-rating, 
 .film-runtime, .film-genre, .add-to-hof, .plot{
-    height: fit-content;
+    height: 100%;
     margin: 0;
     /* border: 1px solid black; */
 }
@@ -236,12 +230,8 @@ main{
 
 .film-rating{
     grid-area: rating;
-    display: flex;
-    align-items: center;
     justify-content: center;
     font-size: .4em;
-    height: 100%;
-
 }
 
 .film-runtime{
@@ -249,15 +239,11 @@ main{
     align-items: center;
     grid-area: runtime;
     font-size: .4em;
-    height: 100%;
 }
 
 .film-genre{
-    display: flex;
-    align-items: center;
     grid-area: genre;
     font-size: .4em;
-    height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -265,9 +251,7 @@ main{
 }
 
 .add-to-hof{
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
     height: fit-content;
     width: 100%;
     grid-area: watchlist;
@@ -290,7 +274,6 @@ main{
 
 .plot{
     grid-area: plot;
-    height: 100%;
     font-size: .35em;
 
 }
