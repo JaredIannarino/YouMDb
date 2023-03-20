@@ -142,6 +142,7 @@ main{
     cursor: pointer;
     color: black;
     font-size: .5em;
+    font-weight: 300;
     background-color: lightgrey;
 }
 
