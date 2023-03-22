@@ -86,9 +86,7 @@ function getMoviesFromApi(moviesArray){
                 imdbIDs.push(imdbId);
                 console.log('added imdbId:', imdbId);
                 window.alert("Added to YourMDb");
-            } else {
-                window.alert("You already have this in your media database");
-            }
+            } 
 
             localStorage.setItem(storageKey, JSON.stringify(imdbIDs))
             console.log('updated imdbIDs:', imdbIDs);
