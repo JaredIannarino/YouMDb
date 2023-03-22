@@ -55,36 +55,43 @@ document.addEventListener("click", function(e){
 function getMoviesFromApi(moviesArray){
     let listsHtml = ``;
     moviesArray.forEach(function(movie){
-            fetch(`https://www.omdbapi.com/?apikey=31a874b3&i=${movie.imdbID}`)
+        fetch(`https://www.omdbapi.com/?apikey=31a874b3&i=${movie.imdbID}`)
         .then(res => res.json())
         .then(data => {
             listsHtml += `
                 <div class="film-wpr">
-                        <img class="film-poster" src="${data.Poster === "N/A" ? "images/noImage.png"  : data.Poster }">
-                        <h1 class="film-title">${data.Title}</h1>
-                        <p1 class="film-rating"><span><i class="fa-solid fa-star"></i></span>${data.imdbRating}</p1>
+                    <img class="film-poster" src="${data.Poster === "N/A" ? "images/noImage.png"  : data.Poster }">
+                    <h1 class="film-title">${data.Title}</h1>
+                    <p1 class="film-rating"><span><i class="fa-solid fa-star"></i></span>${data.imdbRating}</p1>
                     <p1 class="film-runtime">${data.Runtime}</p1>
                     <p1 class="film-genre">${data.Genre}</p1>
                     <button class="add-to-hof" data-imdb-id="${data.imdbID}"><i class="fa-solid fa-circle-plus"></i>Media Database</button>
                     <p1 class="plot">${data.Plot}</p1>
                 </div>
-    `   
-        postSearch.innerHTML = `${listsHtml}`
-        })
+            `;
+
+            postSearch.innerHTML = `${listsHtml}`;
+        });
     });
 
+    // Move the event listener outside of the getMoviesFromApi function
     postSearch.addEventListener("click", function(e) {
         if (e.target.classList.contains("add-to-hof")) {
             const imdbId = e.target.dataset.imdbId;
             const index = imdbIDs.indexOf(imdbId);
-            if (index === -1) {
-                // only add the id if it doesn't already exist in the list//
+            console.log('imdbIDs:', imdbIDs);
+            console.log('imdbId:', imdbId);
+            console.log('index:', index);
+            if (imdbIDs && index === -1) {
                 imdbIDs.push(imdbId);
-                window.confirm("Add this to YourMDb?")
+                console.log('added imdbId:', imdbId);
+                window.alert("Added to YourMDb");
             } else {
-                window.alert("You already have this in your media database")
+                window.alert("You already have this in your media database");
             }
+
             localStorage.setItem(storageKey, JSON.stringify(imdbIDs))
+            console.log('updated imdbIDs:', imdbIDs);
         }
     });
 }

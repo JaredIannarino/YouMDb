@@ -1,36 +1,47 @@
+
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    min-height: fit-content;
     height: 100%;
 }
 
 body{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: lightgrey;
+    background-color: whitesmoke;
 }
 
 main{
-    width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    width: 100%;
+    min-height: fit-content;
+    height: 100%; 
+    flex-direction: column;
     font-family: 'Oswald', sans-serif;
     background-color: white;
     max-width: 1600px;
     font-size: 28pt;
 }
 
-.top-section::before {
+.top-section, .form-wpr, .pre-search, .film-rating, .film-runtime, .film-genre, .remove-from-hof{
+     display: flex;
+     align-items: center;
+}
+
+.top-section::before, .top-section::after{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.top-section::before {
     background-image: url('images/background.jpg');
     opacity: 0.5;
     background-position-y: -130px;
@@ -39,12 +50,6 @@ main{
 }
 
 .top-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(1, 1, 1, 0.8);
 }
 
@@ -52,11 +57,9 @@ main{
     position: relative;
     color: white;
     font-weight: bolder;
-    display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 100%;
-    height: 25%;
+    height: 22.5vh;
     }
 
 .film-h1, .hof-btn{
@@ -71,81 +74,66 @@ main{
     color: white;
     font-weight: bolder;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 7px;
     border: none;
     border: 1px solid lightgray;
-    font-size: 1rem;
+    font-size: .9rem;
     height: fit-content;
 }
 
 .film-h1{
-    font-size: .65em;
-    padding: 27px 0px;
+    font-size: .75em;
+    padding: 30px 0px;
 }
 
 .hof-btn:hover{
     background-color: #9c9c9c;
 }
 
-@media screen and (min-width: 1000px) {
-    main{
-        width: 85%;
-    }
-    
-  .film-h1 {
-     font-size: 2em;
-  }
-  .hof-btn{
-      font-size: .6em;
-      height: 125px;
-  }
 
-  
-}
-
-
-.movie-section .hof-section{
-    display: flex;
+.hof-section{
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     width: 100%;
-    height: 75%;
+    min-height: fit-content;
     font-size: 1em;
+    background-color: white;
+}
+
+.pre-add{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 25px;
+    color: #9c9c9c;
 }
 
 
 .start-exploring{
-    width: 85%;
-    height: fit-content;
-    font-size: .75em;
+    font-size: 1em;
     color: black;
     margin: 0;
     opacity: .4;
 }
 
-.pre-add{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
+.sorry{
+    margin: 0;
+    font-size: .5em;
 }
 
 .reel-icon{
-    width: 20%;
-    height: auto;
-    padding: 15px 0 0 0;
+    width: 30%;
+    padding: 0;
     opacity: .4;
+    max-width: 200px;
 }
 
 
-.film-poster, .film-title, .film-rating, 
+.film-poster, .film-rating, 
 .film-runtime, .film-genre, .add-to-hof, .plot{
-    height: fit-content;
+    height: 100%;
     margin: 0;
     /* border: 1px solid black; */
 }
@@ -176,6 +164,7 @@ main{
 
 .film-title{
     grid-area: title;
+    align-self: center;
     font-size: .425em;
     margin: 0;
     padding: 0;
@@ -185,12 +174,8 @@ main{
 
 .film-rating{
     grid-area: rating;
-    display: flex;
-    align-items: center;
     justify-content: center;
     font-size: .4em;
-    height: 100%;
-
 }
 
 .film-runtime{
@@ -198,15 +183,11 @@ main{
     align-items: center;
     grid-area: runtime;
     font-size: .4em;
-    height: 100%;
 }
 
 .film-genre{
-    display: flex;
-    align-items: center;
     grid-area: genre;
     font-size: .4em;
-    height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -214,9 +195,7 @@ main{
 }
 
 .remove-from-hof{
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
     height: fit-content;
     width: 100%;
     grid-area: watchlist;
@@ -239,7 +218,6 @@ main{
 
 .plot{
     grid-area: plot;
-    height: 100%;
     font-size: .35em;
 
 }
@@ -253,3 +231,112 @@ main{
     padding: 0px 3px 4px 0px;
 
 }
+
+@media screen and (min-width: 700px){
+    .hof-btn{
+        font-size: .75em;
+        height: 66px;
+    }
+
+    .film-h1{
+        font-size: 1.75em;
+        margin: 0;
+        line-height: 1em;
+        padding: 150px 0px;
+    }
+
+    .top-section{
+        height: 22.5vh;
+    }
+
+    .search-bar{
+        font-size: .5em;
+    }
+
+    .search-btn-2{
+        font-size: .75em;
+    }
+
+    .film-wpr{
+            display: grid;
+            grid-template-areas: 
+            "..... ..... ..... ..... ..... ..... ..... ....."
+            "..... poster ..... title title title watchlist ....."
+            "..... poster ..... runtime rating genre genre ....."
+            "..... poster ..... plot plot plot plot ....."
+            "..... ..... ..... ..... ..... ..... ..... ....."; 
+            grid-template-columns: 10px 20% 10px fit-content(75px) fit-content(50px) 1fr fit-content(90px) 10px;
+            grid-template-rows: 10px fit-content(40px) fit-content(35px) fit-content(100px) 10px;
+            height: 200px;
+            border-bottom: 1px solid grey;
+            background-color: white;
+            width: 100%;
+        }
+
+    .hof-section{
+        display: flex;
+        width: 100%;
+
+    }
+
+    .film-poster{
+        width: auto;
+        height: 180px;
+    }
+
+    .film-title{
+        font-size: .7em;
+    }
+
+    .film-runtime{
+        font-size: .6em;
+    }
+
+    .film-rating{
+        font-size: .6em;
+        padding: 0px 10px;
+    }
+
+    .film-genre{
+        font-size: .6em;
+    }
+
+    .remove-from-hof{
+        font-size: .4em;
+        width: fit-content;
+        padding: 5px 10px;
+    }
+
+    .fa-circle-minus{
+        padding-right: 7px;
+        font-size: 1.5em;
+    }
+    .plot{
+        font-size: .5em;
+    }
+    }
+
+    @media screen and (min-width: 1200px){
+        .hof-btn{
+            font-size: 1em;
+            margin-right: 100px;
+            width: 200px;
+        }
+    
+        .film-h1{
+            font-size: 2em;
+            margin: 0;
+            padding-left: 50px;
+        }
+    
+        .hof-section{
+            display: grid;
+            grid-template-columns: .5fr .5fr;
+            grid-gap: 40px;
+            width: 95%;
+        }
+       
+       .top-section{
+        justify-content: space-between;
+       }
+    }
